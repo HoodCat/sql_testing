@@ -47,7 +47,8 @@ join (select b.dept_no, c.dept_name, concat(a.first_name, ' ', a.last_name) as m
       from employees a
       join dept_manager b on a.emp_no = b.emp_no
       join departments c on b.dept_no = c.dept_no
-      where b.to_date = '9999-01-01') c on b.dept_no=c.dept_no;
+      where b.to_date = '9999-01-01') c on b.dept_no=c.dept_no
+where b.to_date = '9999-01-01';
 
 -- 문제 5
 select a.emp_no,
@@ -67,7 +68,8 @@ join (select a.dept_no, avg(b.salary) as avg_salary
       order by avg(b.salary) desc
       limit 1) as e on d.dept_no = e.dept_no
 where b.to_date = '9999-01-01' and
-      c.to_date = '9999-01-01';
+      c.to_date = '9999-01-01' and
+      d.to_date = '9999-01-01';
 
 -- 문제 6
 select a.dept_name

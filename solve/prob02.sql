@@ -30,6 +30,6 @@ select
  
  -- 문제 6
  select
-    year(current_time()) - year(max(birth_date)) as 'youngest',
-    year(current_time()) - year(min(birth_date)) as 'oldest'
+    year(now()) - year(max(birth_date)) as 'youngest',
+    year(now()) - year(min(birth_date)) as 'oldest'
  from employees;
